@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conselho</title>
+    <script>
+        function meu_callback(conteudo){
+            document.getElementById('conselho').value = (conteudo.advice);
+        }
+        function retornaconselho(conselho){
+            if (conselho = 1){
+                var script = document.createElement('script');
+    
+                script.src = 'https://api.adviceslip.com/advice';
+    
+                document.body.appendChild(script);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Conselho</h1>
+    <label for="">Concelho
+        <input type="text" id="conselho">
+    </label>
+    <button onclick="retornaconselho(this.value);" value="1">Gerar Conselho</button>
+</body>
+</html>
